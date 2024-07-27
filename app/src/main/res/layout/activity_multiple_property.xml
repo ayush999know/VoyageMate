@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/amountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Total Amount: $0.00"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:visibility="gone" /> <!-- Initially hidden -->
+
+    <Button
+        android:id="@+id/addPropertyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add More"
+        android:layout_below="@+id/amountTextView"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/autoFillButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto Fill "
+        android:layout_below="@+id/addPropertyButton"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/payNowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay Now"
+        android:layout_below="@+id/autoFillButton"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/showAmountButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Amount"
+        android:layout_below="@+id/payNowButton"
+        android:layout_marginTop="16dp" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showAmountButton"
+        android:layout_marginTop="16dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/propertyContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Initial Property Input -->
+            <LinearLayout
+                android:id="@+id/property1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/propertyId1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Property ID" />
+
+                <EditText
+                    android:id="@+id/ownerName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Owner Name" />
+
+                <Button
+                    android:id="@+id/deleteButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <!-- More property inputs will be added dynamically -->
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

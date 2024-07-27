@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Property ID Input -->
+    <TextView
+        android:id="@+id/textViewPropertyId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Property ID"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextPropertyId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Enter Property ID"/>
+
+    <Button
+        android:id="@+id/buttonSuggestAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto Fill"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Owner Name Input -->
+    <TextView
+        android:id="@+id/textViewOwnerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Owner Name"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextOwnerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Enter Owner's Name"/>
+
+    <!-- Amount to Pay Input -->
+    <TextView
+        android:id="@+id/textViewAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Enter Amount to Pay"/>
+
+    <!-- Payment Button -->
+    <Button
+        android:id="@+id/buttonPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pay Now"
+        android:textSize="18sp"
+        android:layout_marginTop="24dp"
+        android:textColor="@android:color/white"/>
+
+    <Button
+        android:id="@+id/Multiple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Multiple Property"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

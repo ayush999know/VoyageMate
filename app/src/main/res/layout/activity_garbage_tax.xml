@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- ULB Name Input -->
+    <TextView
+        android:id="@+id/textViewULBName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ULB Name"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextULBName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Enter ULB Name"/>
+
+    <!-- E-Nagar Palika Connection ID Input -->
+    <TextView
+        android:id="@+id/textViewENagarPalikaConnectionId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-Nagar Palika Connection ID"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextENagarPalikaConnectionId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Enter E-Nagar Palika Connection ID"/>
+
+    <!-- E-Nagar Palika Property Tax ID Input -->
+    <TextView
+        android:id="@+id/textViewENagarPalikaPropertyTaxId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-Nagar Palika Property Tax ID"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextENagarPalikaPropertyTaxId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Enter E-Nagar Palika Property Tax ID"/>
+
+    <!-- GCP Number Input -->
+    <TextView
+        android:id="@+id/textViewGCPNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GCP Number"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextGCPNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Enter GCP Number"/>
+
+    <!-- Old Property Tax ID/Pin Input -->
+    <TextView
+        android:id="@+id/textViewOldPropertyTaxId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Old Property Tax ID/Pin"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextOldPropertyTaxId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Enter Old Property Tax ID/Pin"/>
+
+    <!-- Buttons Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp">
+
+        <!-- Fill In Button -->
+        <Button
+            android:id="@+id/buttonFillIn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fill In"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"/>
+
+        <!-- Pay Now Button -->
+        <Button
+            android:id="@+id/buttonPay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pay Now"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+</LinearLayout>

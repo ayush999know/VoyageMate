@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Revenue Management</string>
+
+
+    <!-- Property Types Array -->
+    <string-array name="property_types">
+        <item>Residential</item>
+        <item>Commercial</item>
+        <item>Industrial</item>
+    </string-array>
+
+</resources>
