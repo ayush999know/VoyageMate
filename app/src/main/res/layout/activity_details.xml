@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp"
     android:background="@color/backgroundColor">
 
+    <!-- Notification Icon -->
+    <TextView
+        android:id="@+id/click1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        android:text="🔊"
+        android:textSize="20sp" />
+
+    <!-- Input Fields -->
     <EditText
         android:id="@+id/etName"
         android:layout_width="match_parent"
@@ -16,6 +29,7 @@
         android:padding="12dp"
         android:textColor="@color/primaryTextColor"
         android:textColorHint="@color/hintColor"
+        android:layout_below="@id/click1"
         android:layout_marginBottom="8dp"/>
 
     <EditText
@@ -28,18 +42,33 @@
         android:padding="12dp"
         android:textColor="@color/primaryTextColor"
         android:textColorHint="@color/hintColor"
+        android:layout_below="@id/etName"
         android:layout_marginBottom="8dp"/>
 
     <EditText
-        android:id="@+id/etAge"
+        android:id="@+id/etDOB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="25"
-        android:inputType="number"
+        android:hint="03/07/2004"
+        android:inputType="date"
         android:background="@drawable/edittext_background"
         android:padding="12dp"
         android:textColor="@color/primaryTextColor"
         android:textColorHint="@color/hintColor"
+        android:layout_below="@id/etPhoneNumber"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Gender TextView -->
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:hint="Male"
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="16sp"
+        android:layout_below="@id/etDOB"
         android:layout_marginBottom="8dp"/>
 
     <EditText
@@ -52,6 +81,7 @@
         android:padding="12dp"
         android:textColor="@color/primaryTextColor"
         android:textColorHint="@color/hintColor"
+        android:layout_below="@id/tvGender"
         android:layout_marginBottom="16dp"/>
 
     <Button
@@ -61,5 +91,18 @@
         android:text="Submit"
         android:textColor="@android:color/white"
         android:background="@drawable/button_background"
-        android:padding="12dp"/>
-</LinearLayout>
+        android:padding="12dp"
+        android:layout_below="@id/etAddress"/>
+
+    <!-- Footer Text -->
+    <TextView
+        android:id="@+id/footerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click on Submit"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+</RelativeLayout>

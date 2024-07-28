@@ -1,6 +1,7 @@
 package com.example.revenuemanagement;
 
-
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ public class MultipleProperty extends AppCompatActivity {
     private LinearLayout propertyContainer;
     private TextView amountTextView;
     private Button showAmountButton;
+    private MediaPlayer mediaPlayer;
     private int propertyCount = 0;
 
     @Override
@@ -23,12 +25,30 @@ public class MultipleProperty extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multiple_property);
 
+        // Initialize MediaPlayer with the audio resource
+        mediaPlayer = MediaPlayer.create(this, R.raw.multipleproperty); // Replace 'your_audio_file' with your actual audio file name
+
         propertyContainer = findViewById(R.id.propertyContainer);
         amountTextView = findViewById(R.id.amountTextView);
         Button addPropertyButton = findViewById(R.id.addPropertyButton);
         Button autoFillButton = findViewById(R.id.autoFillButton);
         Button payNowButton = findViewById(R.id.payNowButton);
         showAmountButton = findViewById(R.id.showAmountButton);
+        TextView speakerEmoji = findViewById(R.id.speaker_emoji);
+
+        // Set an OnClickListener for the emoji to play and stop audio
+        speakerEmoji.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mediaPlayer != null) {
+                    if (mediaPlayer.isPlaying()) {
+                        mediaPlayer.pause(); // Pause if already playing
+                    } else {
+                        mediaPlayer.start(); // Start playing if not already playing
+                    }
+                }
+            }
+        });
 
         addPropertyButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +77,16 @@ public class MultipleProperty extends AppCompatActivity {
                 showAmount();
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Release MediaPlayer resources when the activity is destroyed
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
     }
 
     private void addProperty() {
@@ -196,7 +226,7 @@ public class MultipleProperty extends AppCompatActivity {
     }
 
     private void handlePayment() {
-        // Show or log property details and handle payment logic
+        // Show or log property details
         for (int i = 0; i < propertyContainer.getChildCount(); i++) {
             View view = propertyContainer.getChildAt(i);
             if (view instanceof LinearLayout) {
@@ -213,7 +243,8 @@ public class MultipleProperty extends AppCompatActivity {
             }
         }
 
-        // Handle the payment logic here
-        // For example, start a new Activity or show a payment dialog
+        // Start the PaymentActivity
+        Intent intent = new Intent(this, PaymentProcess.class);
+        startActivity(intent);
     }
 }

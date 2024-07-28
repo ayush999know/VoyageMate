@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Basic Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="purple">#630330</color>
 
-    <color name="backgroundColor">#F5F5F5</color> <!-- Light gray background -->
-    <color name="primaryTextColor">#333333</color> <!-- Dark text color -->
-    <color name="hintColor">#888888</color> <!-- Light hint color -->
+    <!-- Material Design Colors -->
+    <color name="colorPrimary">#6200EE</color> <!-- Google Purple -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- Darker Purple -->
+    <color name="colorAccent">#03DAC6</color> <!-- Teal -->
+    <color name="colorSecondary">#FF4081</color> <!-- Pink -->
 
+    <!-- Background and Surface Colors -->
+    <color name="backgroundColor">#F5F5F5</color> <!-- Light Gray Background -->
+    <color name="surfaceColor">#FFFFFF</color> <!-- White Surface -->
+    <color name="cardBackgroundColor">#FFFFFF</color> <!-- Card Background -->
+
+    <!-- Text Colors -->
+    <color name="primaryTextColor">#333333</color> <!-- Dark Text Color -->
+    <color name="secondaryTextColor">#666666</color> <!-- Light Text Color -->
+    <color name="hintColor">#888888</color> <!-- Hint Color -->
+
+    <!-- Error and Success Colors -->
+    <color name="errorColor">#B00020</color> <!-- Error Color (Red) -->
+    <color name="successColor">#4CAF50</color> <!-- Success Color (Green) -->
+
+    <!-- Additional Accent Colors -->
+    <color name="accentColor1">#FF5722</color> <!-- Deep Orange -->
+    <color name="accentColor2">#FFC107</color> <!-- Amber -->
+    <color name="accentColor3">#3F51B5</color> <!-- Indigo -->
+    <color name="accentColor4">#009688</color> <!-- Teal -->
+
+    <!-- Borders and Dividers -->
+    <color name="dividerColor">#E0E0E0</color> <!-- Light Gray Divider -->
+    <color name="borderColor">#CCCCCC</color> <!-- Light Border Color -->
 </resources>

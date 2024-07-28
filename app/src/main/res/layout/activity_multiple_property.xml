@@ -4,11 +4,26 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
+    <!-- Speaker Emoji TextView at the top-right -->
+
+    <TextView
+        android:id="@+id/speaker_emoji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="🔊"
+        android:textSize="20sp" />
+
     <TextView
         android:id="@+id/amountTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:text="Total Amount: $0.00"
         android:textSize="18sp"
@@ -27,7 +42,7 @@
         android:id="@+id/autoFillButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Auto Fill "
+        android:text="Auto Fill"
         android:layout_below="@+id/addPropertyButton"
         android:layout_marginTop="16dp" />
 

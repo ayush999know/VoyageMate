@@ -1,5 +1,6 @@
 package com.example.revenuemanagement;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -74,8 +75,11 @@ public class GarbageTax extends AppCompatActivity {
             return;
         }
 
-        // Handle the payment processing logic here
-        // This could involve sending data to a server, validating inputs, etc.
-        Toast.makeText(this, "Payment processed successfully for ULB: " + ulbName, Toast.LENGTH_LONG).show();
+        // Create an intent to start the new activity
+        Intent intent = new Intent(GarbageTax.this, PaymentProcess.class);
+        startActivity(intent);
+
+        // Optionally, display a message
+        Toast.makeText(this, "Navigating to payment screen for ULB: " + ulbName, Toast.LENGTH_LONG).show();
     }
 }

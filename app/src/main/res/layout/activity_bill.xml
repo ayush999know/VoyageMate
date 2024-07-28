@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/taxBillTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Official Tax Bill"
+        android:textSize="24sp"
+        android:textColor="#333333"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:textStyle="bold"/>
+
+    <!-- Taxpayer Information -->
+    <TextView
+        android:id="@+id/taxpayerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Taxpayer: Rahul Dubey"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/taxpayerAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address: 123 Main Street, Indore, MP, 452001"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Bill Details -->
+    <TextView
+        android:id="@+id/billNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bill Number: 2024-001234"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/paymentStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Paid"
+        android:textSize="16sp"
+        android:textColor="#4CAF50"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/paymentDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Date: 2024-07-28"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Breakdown of Charges -->
+    <TextView
+        android:id="@+id/breakdownTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Breakdown of Charges"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/propertyTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Property Tax: [Amount Hidden]"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/garbageTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Garbage Tax: [Amount Hidden]"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/waterTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Water Tax: [Amount Hidden]"
+        android:textSize="16sp"
+        android:textColor="#333333"/>
+
+    <!-- Total Amount -->
+    <TextView
+        android:id="@+id/totalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Amount Paid: [Amount Hidden]"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"/>
+
+    <!-- Footer Note -->
+    <TextView
+        android:id="@+id/footerNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thank you for your timely payment. This bill is automatically generated and does not require a signature."
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="32dp"/>
+</LinearLayout>

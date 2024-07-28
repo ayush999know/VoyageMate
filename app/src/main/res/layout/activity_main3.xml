@@ -4,6 +4,19 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
+    <!-- Notification Icon -->
+    <TextView
+        android:id="@+id/click1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        android:text="🔊"
+        android:textSize="20sp" />
+
     <!-- OTP Input Boxes -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -66,15 +79,25 @@
         android:id="@+id/submitButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="37dp"
         android:layout_marginTop="416dp"
         android:layout_marginEnd="27dp"
         android:padding="16dp"
         android:text="Submit"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:background="@color/hintColor" />
 
+    <!-- Footer Text -->
+    <TextView
+        android:id="@+id/footerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hint: Enter 1111"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
 </RelativeLayout>

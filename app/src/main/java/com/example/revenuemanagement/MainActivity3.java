@@ -1,18 +1,21 @@
 package com.example.revenuemanagement;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity3 extends AppCompatActivity {
 
     private EditText otpBox1, otpBox2, otpBox3, otpBox4;
     private Button submitButton;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,10 @@ public class MainActivity3 extends AppCompatActivity {
         otpBox3 = findViewById(R.id.otpBox3);
         otpBox4 = findViewById(R.id.otpBox4);
         submitButton = findViewById(R.id.submitButton);
+        TextView click1 = findViewById(R.id.click1);
+
+        // Initialize MediaPlayer with the audio file
+        mediaPlayer = MediaPlayer.create(this, R.raw.otp);
 
         setUpOtpBoxNavigation();
 
@@ -42,6 +49,16 @@ public class MainActivity3 extends AppCompatActivity {
                     // Show error message or handle invalid OTP
                     otpBox1.setError("Invalid OTP. Please enter 1111.");
                     otpBox1.requestFocus();
+                }
+            }
+        });
+
+        click1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Play the audio when TextView is clicked
+                if (mediaPlayer != null) {
+                    mediaPlayer.start();
                 }
             }
         });
@@ -101,5 +118,27 @@ public class MainActivity3 extends AppCompatActivity {
                 if (s.length() == 0) otpBox3.requestFocus();
             }
         });
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Stop and release MediaPlayer when the activity is paused
+        if (mediaPlayer != null) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Stop and release MediaPlayer when the activity is destroyed
+        if (mediaPlayer != null) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
     }
 }

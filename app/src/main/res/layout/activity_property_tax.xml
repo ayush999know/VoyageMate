@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp">
+
+    <!-- Speaker Emoji at the top right -->
+    <TextView
+        android:id="@+id/speaker_emoji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔊"
+        android:textSize="20sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:focusable="true" />
 
     <!-- Property ID Input -->
     <TextView
@@ -12,20 +23,24 @@
         android:layout_height="wrap_content"
         android:text="Property ID"
         android:textSize="16sp"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="8dp"
+        android:layout_below="@id/speaker_emoji"/>
 
     <EditText
         android:id="@+id/editTextPropertyId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
-        android:hint="Enter Property ID"/>
+        android:hint="Enter Property ID"
+        android:layout_below="@id/textViewPropertyId"
+        android:layout_marginBottom="8dp"/>
 
     <Button
         android:id="@+id/buttonSuggestAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Auto Fill"
+        android:layout_below="@id/editTextPropertyId"
         android:layout_marginTop="8dp"/>
 
     <!-- Owner Name Input -->
@@ -36,14 +51,17 @@
         android:text="Owner Name"
         android:textSize="16sp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="8dp"
+        android:layout_below="@id/buttonSuggestAll"/>
 
     <EditText
         android:id="@+id/editTextOwnerName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
-        android:hint="Enter Owner's Name"/>
+        android:hint="Enter Owner's Name"
+        android:layout_below="@id/textViewOwnerName"
+        android:layout_marginBottom="8dp"/>
 
     <!-- Amount to Pay Input -->
     <TextView
@@ -53,14 +71,17 @@
         android:text="Amount"
         android:textSize="16sp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="8dp"
+        android:layout_below="@id/editTextOwnerName"/>
 
     <EditText
         android:id="@+id/editTextAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
-        android:hint="Enter Amount to Pay"/>
+        android:hint="Enter Amount to Pay"
+        android:layout_below="@id/textViewAmount"
+        android:layout_marginBottom="8dp"/>
 
     <!-- Payment Button -->
     <Button
@@ -70,7 +91,8 @@
         android:text="Pay Now"
         android:textSize="18sp"
         android:layout_marginTop="24dp"
-        android:textColor="@android:color/white"/>
+        android:textColor="@android:color/white"
+        android:layout_below="@id/editTextAmount"/>
 
     <Button
         android:id="@+id/Multiple"
@@ -79,6 +101,7 @@
         android:layout_marginTop="24dp"
         android:text="Multiple Property"
         android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:layout_below="@id/buttonPay"/>
 
-</LinearLayout>
+</RelativeLayout>

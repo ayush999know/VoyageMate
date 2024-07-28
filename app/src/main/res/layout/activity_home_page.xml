@@ -7,7 +7,7 @@
     android:background="@color/white"
     tools:context=".MainActivity">
 
-    <!-- Top bar with Profile and Notification icons -->
+    <!-- Top bar with Profile and Speaker emoji -->
     <RelativeLayout
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
@@ -22,32 +22,72 @@
             android:src="@drawable/profile"
             android:layout_alignParentStart="true" />
 
-        <ImageView
-            android:id="@+id/notification_icon"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/notification"
-            android:layout_alignParentEnd="true" />
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textSize="16sp"
+            android:layout_toEndOf="@id/profile_icon"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/speaker_emoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔊"
+            android:textSize="20sp"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:focusable="true" />
+
     </RelativeLayout>
 
-    <!-- VideoView for playing video -->
-    <VideoView
-        android:id="@+id/video_view"
+    <!-- Horizontal ScrollView with ImageViews -->
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_below="@id/top_bar"
         android:layout_marginTop="16dp"
-        android:paddingLeft="16dp"
-        android:paddingTop="8dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="8dp" />
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="380dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/sewage"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:layout_width="380dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/swachh"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:layout_width="380dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/smart"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+    </HorizontalScrollView>
 
     <!-- GridLayout for the 3x2 grid of small squares -->
     <GridLayout
         android:id="@+id/grid_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/video_view"
+        android:layout_below="@id/horizontal_scroll_view"
         android:layout_marginTop="16dp"
         android:columnCount="3"
         android:rowCount="2"
@@ -55,19 +95,21 @@
         android:layout_margin="8dp"
         android:layout_marginBottom="16dp">
 
-        <!-- ImageView for the first cell -->
+        <!-- ImageViews for grid cells -->
+
         <ImageView
             android:layout_width="0dp"
             android:layout_height="100dp"
-            android:layout_columnSpan="1"
+            android:layout_row="0"
             android:layout_rowSpan="1"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_columnWeight="1"
             android:layout_margin="4dp"
-            android:src="@drawable/q"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/propertyicon" />
 
-        <!-- ImageView for the second cell -->
         <ImageView
             android:layout_width="0dp"
             android:layout_height="100dp"
@@ -79,7 +121,6 @@
             android:src="@drawable/watertaxicon"
             android:scaleType="centerCrop" />
 
-        <!-- ImageView for the third cell -->
         <ImageView
             android:layout_width="0dp"
             android:layout_height="100dp"
@@ -93,9 +134,6 @@
     </GridLayout>
 
     <!-- Still image below GridLayout -->
-
-    <!-- ScrollView for additional content -->
-
     <ImageView
         android:id="@+id/still_image"
         android:layout_width="match_parent"
@@ -106,6 +144,7 @@
         android:src="@drawable/a"
         android:clickable="true" />
 
+    <!-- ScrollView for additional content -->
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
@@ -121,14 +160,12 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Add your content here that you want to be scrollable -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Pending"
                 android:padding="8dp" />
 
-            <!-- Example additional ImageView -->
             <ImageView
                 android:id="@+id/image_b"
                 android:layout_width="match_parent"
@@ -180,10 +217,7 @@
                 android:src="@drawable/f"
                 android:clickable="true" />
 
-
-
-
-</LinearLayout>
+        </LinearLayout>
     </ScrollView>
 
     <!-- Bottom icons layout -->
@@ -216,7 +250,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_weight="1"
-            android:src="@drawable/profile" />
+            android:src="@drawable/chatbot" />
 
     </LinearLayout>
 

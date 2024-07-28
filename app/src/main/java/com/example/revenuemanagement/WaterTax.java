@@ -1,5 +1,6 @@
 package com.example.revenuemanagement;
 
+import android.content.Intent; // Import Intent class
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -84,5 +85,9 @@ public class WaterTax extends AppCompatActivity {
         // Handle the payment processing logic here
         // This could involve sending data to a server, validating inputs, etc.
         Toast.makeText(this, "Payment processed successfully for City: " + cityName, Toast.LENGTH_LONG).show();
+
+        // Start PaymentActivity
+        Intent intent = new Intent(WaterTax.this, PaymentProcess.class);
+        startActivity(intent);
     }
 }

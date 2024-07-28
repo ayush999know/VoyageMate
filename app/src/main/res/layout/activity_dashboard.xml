@@ -1,79 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Define your image items here -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/progress_text_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.001113%"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/image_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sewage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/progress_text_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.000%"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/image_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/smart"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/progress_text_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0008%"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/image_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/swachh"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+
+            <!-- Add more LinearLayouts for additional images -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/speaker_emoji"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <!-- Define your image items here -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/progress_text_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0.001%"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:id="@+id/image_1"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:src="@drawable/sample"
-                android:scaleType="fitCenter" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/progress_text_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0.000%"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:id="@+id/image_2"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:src="@drawable/sample"
-                android:scaleType="fitCenter" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/progress_text_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0.0009%"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:id="@+id/image_3"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:src="@drawable/sample"
-                android:scaleType="fitCenter" />
-        </LinearLayout>
-
-        <!-- Add more LinearLayouts for additional images -->
-
-    </LinearLayout>
-</ScrollView>
+        android:text="🔊"
+        android:textSize="20sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="16dp" />
+</RelativeLayout>
